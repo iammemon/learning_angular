@@ -1,0 +1,20 @@
+<div class="container">
+      <div *ngIf="error" class="alert alert-danger mt-3" role="alert">
+            Cannot Add Empty Todo!
+      </div>
+    <div class="row justify-content-center mt-5">
+          <form (submit)="addTodo(todoInput.value)" class="col-6">
+              <div class="form-group">
+                <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="Enter Todo" #todoInput>
+              </div>
+              <button type="submit" class="btn btn-primary">Add Todo</button>
+            </form>
+      </div>
+      <div class="row justify-content-center mt-3">
+          <div class="col-sm-6">
+                <app-todo-list [allTodos]="todos"></app-todo-list>
+          </div>         
+      </div>
+</div>
+  
+  

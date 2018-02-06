@@ -1,0 +1,6 @@
+<div>
+    <h5 class="text-center" style="color:gray">Total Todos ({{todosCount}})</h5>
+    <ul class="mt-4 list-group" *ngFor="let todo of allTodos" >
+        <app-todo-item [Todo]="todo"></app-todo-item>
+    </ul>
+</div>
